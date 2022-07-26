@@ -1,0 +1,5 @@
+version: "3.9"
+
+services:
+  atlantis:
+    image: ghcr.io/runatlantis/atlantis:v0.19.6
