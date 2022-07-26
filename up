@@ -1,0 +1,7 @@
+#!/bin/bash
+
+docker-compose up -d ngrok
+export WEBHOOK_BASE_URL=$(bash ./ngrok_url.sh)
+echo $WEBHOOK_BASE_URL
+
+docker-compose up -d atlantis

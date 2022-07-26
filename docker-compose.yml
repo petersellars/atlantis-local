@@ -1,5 +1,18 @@
 version: "3.9"
 
 services:
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: ngrok
+    network_mode: "host"
+    volumes:
+      - ${PWD}/ngrok.yml:/etc/ngrok.yml
+    env_file: atlantis-local.env
+    command: http 4141
+
   atlantis:
     image: ghcr.io/runatlantis/atlantis:v0.19.6
+    container_name: atlantis
+    environment:
+      - URL=${WEBHOOK_BASE_URL}
