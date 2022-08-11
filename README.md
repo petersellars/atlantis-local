@@ -3,8 +3,18 @@ Using [Atlantis](https://www.runatlantis.io/) locally to learn and experiment.
 
 ## TODO Next
 
-* Script Add Webhook / Remove Webhook (Use GitHub API)
-* Script Add Access Token / Remove Access Token (Use GitHub API)
+* Add Access Token for GitHub User
+* Add Webhook / Remove Webhook (Use GitHub API)
+
+## Pre-Requisites
+
+* GitHub Bot Account
+
+### GitHub Bot Account
+Atlantis recommends creating a GitHub user, from which all comments that Atlantis writes will come from. The best way to create this account is by using an email ID, i.e. myemail+atlantisbot@gmail.com.
+
+My Atlantis GitHub bot user:
+[atlantisbot-catosplace](https://github.com/atlantisbot-catosplace)
 
 ## Requirements
 
@@ -19,6 +29,14 @@ You will need an `atlantis-local.env` file
 ```
 NGROK_TOKEN=[YOUR_NGROK_TOKEN]
 NGROK_CONFIG=/etc/ngrok.yml
+```
+
+You will also need an `atlantis.env` file
+```
+ATLANTIS_GH_USER="YOUR_ATLANTIS_GITHUB_BOT_USER"
+ATLANTIS_GH_TOKEN="YOUR_ATLANTIS_GITHUB_BOT_USER_ACCESS_TOKEN"
+ATLANTIS_GH_WEBHOOK_SECRET="YOUR_REPO_WEBHOOK_SECRET"
+ATLANTIS_REPO_ALLOWLIST="YOUR_REPO_ALLOWLIST"
 ```
 
 ## Usage

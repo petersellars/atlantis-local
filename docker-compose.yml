@@ -14,5 +14,6 @@ services:
   atlantis:
     image: ghcr.io/runatlantis/atlantis:v0.19.6
     container_name: atlantis
+    env_file: atlantis.env
     environment:
-      - URL=${WEBHOOK_BASE_URL}
+      - ATLANTIS_ATLANTIS_URL=${WEBHOOK_BASE_URL}
