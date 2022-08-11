@@ -3,7 +3,7 @@
 function echoUrl {
   ngrok_tunnels=$(curl -s http://localhost:4040/api/tunnels)
   index=$(echo $ngrok_tunnels | jq '.tunnels | map(.proto == "https") | index(true)')
-  echo $ngrok_tunnels | jq -r ".tunnels[$index].public_url"
+  echo $ngrok_tunnels | jq -r ".tunnels[$index].public_url" 2> /dev/null
 }
 
 n=0
