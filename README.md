@@ -3,18 +3,27 @@ Using [Atlantis](https://www.runatlantis.io/) locally to learn and experiment.
 
 ## TODO Next
 
-* Add Access Token for GitHub User
 * Add Webhook / Remove Webhook (Use GitHub API)
 
 ## Pre-Requisites
 
 * GitHub Bot Account
+* GitHub User Access Token
+* A Webhook Secret
 
 ### GitHub Bot Account
 Atlantis recommends creating a GitHub user, from which all comments that Atlantis writes will come from. The best way to create this account is by using an email ID, i.e. myemail+atlantisbot@gmail.com.
 
 My Atlantis GitHub bot user:
 [atlantisbot-catosplace](https://github.com/atlantisbot-catosplace)
+
+### GitHub User Access Token
+Information on generating the appropriate access token can be found [here](https://www.runatlantis.io/docs/access-credentials.html#generating-an-access-token). The token should be created with `repo` scope. You should record your access token as you will need to add it to the `atlantis.env` configuration file.
+
+### A Webhook Secret
+Generate a Webhook secret using a random string generator. It should be greater than 24 characters.
+
+Useful tool: https://www.browserling.com/tools/random-string
 
 ## Requirements
 

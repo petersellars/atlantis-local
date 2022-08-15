@@ -13,6 +13,8 @@ services:
 
   atlantis:
     image: ghcr.io/runatlantis/atlantis:v0.19.6
+    ports:
+      - 4141:4141
     container_name: atlantis
     env_file: atlantis.env
     environment:
